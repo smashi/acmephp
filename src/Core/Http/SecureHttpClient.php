@@ -329,7 +329,7 @@ class SecureHttpClient
         $request = new Request($method, $endpoint);
 
         if ($acceptJson) {
-            $request = $request->withHeader('Accept', 'application/json,application/jose+json,');
+            $request = $request->withHeader('Accept', 'application/json,application/jose+json,application/pem-certificate-chain,');
         } else {
             $request = $request->withHeader('Accept', '*/*');
         }
